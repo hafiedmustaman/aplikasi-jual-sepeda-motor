@@ -12,4 +12,14 @@ class Rumah extends CI_Controller {
 	{
 		$this->load->view('berita');
 	}
+
+		public function artikel01()
+		{
+			$this->load->view('artikel/083100615');
+		}
+
+	public function tentang()
+	{
+		$this->load->view('tentang');
+	}
 }

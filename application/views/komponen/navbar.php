@@ -22,7 +22,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="far fa-address-card"></i> Tentang Kami</a>
+        <a class="nav-link" href="<?php echo base_url() ?>rumah/tentang"><i class="far fa-address-card"></i> Tentang Kami</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
