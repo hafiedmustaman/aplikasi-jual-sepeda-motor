@@ -21,7 +21,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="container">
                 <h1 class="display-4">Aplikasi Jual Sepeda Motor</h1>
                 <hr>
-                <p class="lead">Selamat datang di website Aplikasi Penjualan Sepeda Motor.<br />
+                <p class="lead">Halo, <br />
+                Selamat datang di website Aplikasi Penjualan Sepeda Motor.<br />
                 Silahkan pilih menu yang tersedia.</p>
             </div>
         </div>

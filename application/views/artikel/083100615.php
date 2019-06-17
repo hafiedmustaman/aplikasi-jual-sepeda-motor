@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <div class="col-md-8">
   <h3>Daftar Harga Motor Sport 150 cc Juni 2019</h3>
   <hr>
-    <img src="<?php echo base_url(); ?>asset/gambar/2405931936.jpg" class="img-fluid" alt="Daftar Harga Motor Sport 150 cc Juni 2019">
+    <img src="<?php echo base_url(); ?>asset/gambar/2405931936.jpg" class="img-thumbnail" alt="Daftar Harga Motor Sport 150 cc Juni 2019">
     <p align="justify">Memasuki pertengahan 2019, segmen sepeda motor sport 150 cc menjadi salah satu pasar yang digemari masyarkat. 
     Buktinya, dua merek melakukan penyegaran pada produknya beberapa waktu lalu.</p>
     <p align="justify">Merek kedua, Suzuki memberikan warna baru untuk GSX-R dan GSX-S. Selain itu Suzuki juga memberikan penambahan detil 
