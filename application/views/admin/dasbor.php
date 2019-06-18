@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <?php include 'application/views/komponen/js_head.php'; ?>
 </head>
 <body>
-<?php include 'application/views/komponen/navbar.php'; ?>
+<?php include 'application/views/admin/komponen/navbar.php'; ?>
 <main class="container"> 
 
 <div class="row">
@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="container">
                 <h1 class="display-4">Aplikasi Jual Sepeda Motor</h1>
                 <hr>
-                <p class="lead">Halo, <br />
+                <p class="lead">Halo, <?php echo strtoupper($this->session->userdata("nama")); ?><br />
                 Selamat datang di website Aplikasi Penjualan Sepeda Motor.<br />
                 Silahkan pilih menu yang tersedia.</p>
             </div>

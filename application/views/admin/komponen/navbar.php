@@ -25,9 +25,15 @@
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
-    <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url() ?>rumah/login"><i class="fas fa-sign-in-alt"></i> Masuk</a>
-      </li> 
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <?php echo strtoupper($this->session->userdata("nama")); ?>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="<?php echo base_url() ?>#"><i class="fas fa-sliders-h"></i> Pengaturan</a>
+          <a class="dropdown-item" href="<?php echo base_url() ?>login/logout"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+        </div>
+      </li>
     </ul>
   </div>
 

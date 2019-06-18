@@ -26,7 +26,7 @@
     </ul>
     <ul class="navbar-nav ml-auto">
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url() ?>rumah/login"><i class="fas fa-sign-in-alt"></i> Masuk</a>
+        <a class="nav-link" href="<?php echo base_url() ?>login"><i class="fas fa-sign-in-alt"></i> Masuk</a>
       </li> 
     </ul>
   </div>

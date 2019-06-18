@@ -32,11 +32,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php echo form_open('login/cek_login');?>
                     <div class="form-group">
                         <label for="exampleInputUsername1">Username</label>
-                        <input type="text" class="form-control" name="formUsername" id="exampleInputEmail1" placeholder="Username">
+                        <input type="text" class="form-control" name="formUsername" id="exampleInputEmail1" placeholder="Username" required>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" name="formPassword" id="exampleInputPassword1" placeholder="Password">
+                        <input type="password" class="form-control" name="formPassword" id="exampleInputPassword1" placeholder="Password" required>
                     </div>
                     <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Submit</button>
                     <?php echo form_close(); ?>
