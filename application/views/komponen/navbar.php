@@ -21,6 +21,9 @@
         </div>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url() ?>rumah/pemesanan"><i class="fas fa-shopping-cart"></i> Pemesanan</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url() ?>rumah/tentang"><i class="far fa-address-card"></i> Tentang</a>
       </li>
     </ul>
