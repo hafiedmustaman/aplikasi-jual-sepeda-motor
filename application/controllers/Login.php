@@ -5,9 +5,9 @@ class Login extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
-        $this->load->helper(array('form'));
-        $this->load->library('form_validation');
-        $this->load->model('login_model');
+		$this->load->helper(array('form'));
+		$this->load->library('form_validation');    
+		$this->load->model('login_model');    
 	}
 
 	public function index()
@@ -61,7 +61,7 @@ class Login extends CI_Controller {
 					'status' => "login"
 				);
 				$this->session->set_userdata($data_session);
-				redirect('admin');
+				redirect(base_url("admin"));
 			}
 			elseif ($cek['level'] == 'customer') {
 				$data_session = array(
@@ -70,7 +70,7 @@ class Login extends CI_Controller {
 					'status' => "login"
 				);
 				$this->session->set_userdata($data_session);
-				redirect('customer');
+				redirect(base_url("customer"));
 			}
 			 
 		}

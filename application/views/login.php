@@ -38,7 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <label for="exampleInputPassword1">Password</label>
                         <input type="password" class="form-control" name="formPassword" id="exampleInputPassword1" placeholder="Password" required>
                     </div>
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Submit</button>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Masuk</button>
                     <?php echo form_close(); ?>
                 </div>
                 <div class="col-sm">
