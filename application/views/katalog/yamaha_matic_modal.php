@@ -16,8 +16,8 @@
       <div class="modal-body">
         <table class="table-light">
             <tr align="center">
-                <td><a class="btn btn-primary" href="<?php echo base_url() ?>rumah/tunai" role="button">Tunai</a></td>
-                <td><a class="btn btn-primary" href="<?php echo base_url() ?>rumah/kredit" role="button">Kredit</a></td>
+                <td><a class="btn btn-primary" href="<?php echo base_url() ?>rumah/yamaha_matic_tunai" role="button">Tunai</a></td>
+                <td><a class="btn btn-primary" href="<?php echo base_url() ?>rumah/yamaha_matic_kredit" role="button">Kredit</a></td>
             </tr>
         </table>
       </div>

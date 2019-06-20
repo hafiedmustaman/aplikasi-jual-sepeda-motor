@@ -37,7 +37,7 @@ class Rumah extends CI_Controller {
 			$data = $this->katalog_model->honda_sport();
 			$this->load->view('katalog/honda_sport', array('data' => $data));
 		}
-
+		
 		public function honda_matic()
 		{
 			$this->load->model('katalog_model');
@@ -132,6 +132,157 @@ class Rumah extends CI_Controller {
 		public function honda_sport_tunai()
 		{
 			$this->load->view('order/honda/sport/tunai');
+		}
+
+		public function honda_matic_tunai()
+		{
+			$this->load->view('order/honda/matic/tunai');
+		}
+
+		public function honda_bebek_tunai()
+		{
+			$this->load->view('order/honda/bebek/tunai');
+		}
+
+		public function yamaha_sport_tunai()
+		{
+			$this->load->view('order/yamaha/sport/tunai');
+		}
+
+		public function yamaha_matic_tunai()
+		{
+			$this->load->view('order/yamaha/matic/tunai');
+		}
+
+		public function yamaha_bebek_tunai()
+		{
+			$this->load->view('order/yamaha/bebek/tunai');
+		}
+
+		public function suzuki_sport_tunai()
+		{
+			$this->load->view('order/suzuki/sport/tunai');
+		}
+
+		public function suzuki_matic_tunai()
+		{
+			$this->load->view('order/suzuki/matic/tunai');
+		}
+
+		public function suzuki_bebek_tunai()
+		{
+			$this->load->view('order/suzuki/bebek/tunai');
+		}
+
+			public function cod_aksi_tambah()
+			{
+				$this->load->model('tunai_model');
+
+				$id_transaksi 		= $this->input->post('formId_transaksi');
+				$id_barang 			= $this->input->post('formId_barang');
+				$tgl_transaksi	 	= $this->input->post('formTgl_transaksi');
+				$tipe_pembayaran 	= $this->input->post('formTipe_pembayaran');
+				$pilihan_pembayaran = $this->input->post('formPilihan_pembayaran');
+				$nama_pembeli 		= $this->input->post('formNama_pembeli');
+				$alamat_pembeli 	= $this->input->post('formAlamat_pembeli');
+				$no_telp 			= $this->input->post('formNo_telp');
+
+				$data = array(
+					'id_transaksi' => $id_transaksi,
+					'id_barang' => $id_barang,
+					'tgl_transaksi' => $tgl_transaksi,
+					'tipe_pembayaran' => $tipe_pembayaran,
+					'pilihan_pembayaran' => $pilihan_pembayaran,
+					'nama_pembeli' => $nama_pembeli,
+					'alamat_pembeli' => $alamat_pembeli,
+					'no_telp' => $no_telp,
+					);
+				$this->tunai_model->cod_input_data($data,'trans_tunai');
+				redirect('rumah/cod_done');
+			}
+
+				public function cod_done()
+				{
+					$this->load->view('order/cod_done');
+				}
+
+			public function langsung_aksi_tambah()
+			{
+				$this->load->model('tunai_model');
+
+				$id_transaksi 		= $this->input->post('formId_transaksi');
+				$id_barang 			= $this->input->post('formId_barang');
+				$tgl_transaksi	 	= $this->input->post('formTgl_transaksi');
+				$tipe_pembayaran 	= $this->input->post('formTipe_pembayaran');
+				$pilihan_pembayaran = $this->input->post('formPilihan_pembayaran');
+				$nama_pembeli 		= $this->input->post('formNama_pembeli');
+				$alamat_pembeli 	= $this->input->post('formAlamat_pembeli');
+				$no_telp 			= $this->input->post('formNo_telp');
+
+				$data = array(
+					'id_transaksi' => $id_transaksi,
+					'id_barang' => $id_barang,
+					'tgl_transaksi' => $tgl_transaksi,
+					'tipe_pembayaran' => $tipe_pembayaran,
+					'pilihan_pembayaran' => $pilihan_pembayaran,
+					'nama_pembeli' => $nama_pembeli,
+					'alamat_pembeli' => $alamat_pembeli,
+					'no_telp' => $no_telp,
+					);
+				$this->tunai_model->langsung_input_data($data,'trans_tunai');
+				redirect('rumah/langsung_done');
+			}
+
+				public function langsung_done()
+				{
+					$this->load->view('order/langsung_done');
+				}
+
+		public function honda_sport_kredit()
+		{
+			$this->load->model('kredit_model');
+			$data = $this->kredit_model->honda_sport_skema();
+			$this->load->view('order/honda/sport/kredit', array('data' => $data));
+		}
+	
+		public function honda_matic_kredit()
+		{
+			$this->load->view('order/honda/matic/kredit');
+		}
+
+		public function honda_bebek_kredit()
+		{
+			$this->load->view('order/honda/bebek/kredit');
+		}
+
+		public function yamaha_sport_kredit()
+		{
+			$this->load->view('order/yamaha/sport/kredit');
+		}
+
+		public function yamaha_matic_kredit()
+		{
+			$this->load->view('order/yamaha/matic/kredit');
+		}
+
+		public function yamaha_bebek_kredit()
+		{
+			$this->load->view('order/yamaha/bebek/kredit');
+		}
+
+		public function suzuki_sport_kredit()
+		{
+			$this->load->view('order/suzuki/sport/kredit');
+		}
+
+		public function suzuki_matic_kredit()
+		{
+			$this->load->view('order/suzuki/matic/kredit');
+		}
+
+		public function suzuki_bebek_kredit()
+		{
+			$this->load->view('order/suzuki/bebek/kredit');
 		}
 
 	public function tentang()

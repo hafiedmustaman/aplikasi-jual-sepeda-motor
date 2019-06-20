@@ -21,9 +21,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <hr>
             <h3>Kelompok 2</h3>
             <ol>
-                <li>Muhammad Faiz Alrinurizzah</li>
+                <li>Muhammad Faiz Alrinurizzah (1461700133)</li>
                 <li>Hafied Mustaman (1461700138)</li>
-                <li>Riyan Saputra</li>
+                <li>Riyan Saputra (1461700133)</li>
             </ol>
         </div>
         <div class="col-md-2">

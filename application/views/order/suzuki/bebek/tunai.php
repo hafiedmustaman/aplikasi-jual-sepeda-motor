@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
-                    <?php include 'application/views/order/honda/sport/form_cod.php'; ?>
+                    <?php include 'application/views/order/suzuki/bebek/form_cod.php'; ?>
                     </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                     <div class="card-body">
-                    <?php include 'application/views/order/honda/sport/form_langsung.php'; ?>
+                    <?php include 'application/views/order/suzuki/bebek/form_langsung.php'; ?>
                     </div>
                     </div>
                 </div>
