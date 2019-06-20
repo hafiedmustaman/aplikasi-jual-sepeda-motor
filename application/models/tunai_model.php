@@ -20,4 +20,9 @@ class Tunai_model extends CI_Model{
         $this->dbo->insert($table, $data);
     }
 
+    function transfer_input_data($data, $table)
+    {
+        $this->dbo->insert($table, $data);
+    }
+
 }

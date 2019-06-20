@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2019 at 10:55 AM
+-- Generation Time: Jun 20, 2019 at 01:11 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.1.16
 
@@ -129,6 +129,28 @@ INSERT INTO `kredit` (`id_kredit`, `nama_agen`, `id_barang`, `uang_muka`, `angsu
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `trans_kredit`
+--
+
+CREATE TABLE `trans_kredit` (
+  `id_transaksi` varchar(5) NOT NULL,
+  `id_kredit` varchar(5) NOT NULL,
+  `tgl_transaksi` date NOT NULL,
+  `nama_pembeli` varchar(255) NOT NULL,
+  `alamat_pembeli` text NOT NULL,
+  `no_telp` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `trans_kredit`
+--
+
+INSERT INTO `trans_kredit` (`id_transaksi`, `id_kredit`, `tgl_transaksi`, `nama_pembeli`, `alamat_pembeli`, `no_telp`) VALUES
+('t0003', 'k0029', '2019-06-20', 'paino', 'solo', '08456789123');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `trans_tunai`
 --
 
@@ -140,16 +162,18 @@ CREATE TABLE `trans_tunai` (
   `pilihan_pembayaran` varchar(255) NOT NULL,
   `nama_pembeli` varchar(255) NOT NULL,
   `alamat_pembeli` text NOT NULL,
-  `no_telp` varchar(15) NOT NULL
+  `no_telp` varchar(15) NOT NULL,
+  `bukti_pembayaran` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `trans_tunai`
 --
 
-INSERT INTO `trans_tunai` (`id_transaksi`, `id_barang`, `tgl_transaksi`, `tipe_pembayaran`, `pilihan_pembayaran`, `nama_pembeli`, `alamat_pembeli`, `no_telp`) VALUES
-('t0001', 'b0001', '2019-06-20', 'tunai', 'cod', 'paijo', 'surabaya', '0123456789'),
-('t0002', 'b0001', '2019-06-20', 'tunai', 'langsung', 'paimen', 'jakarta', '0123789456');
+INSERT INTO `trans_tunai` (`id_transaksi`, `id_barang`, `tgl_transaksi`, `tipe_pembayaran`, `pilihan_pembayaran`, `nama_pembeli`, `alamat_pembeli`, `no_telp`, `bukti_pembayaran`) VALUES
+('t0001', 'b0001', '2019-06-20', 'tunai', 'cod', 'paijo', 'surabaya', '0123456789', ''),
+('t0002', 'b0001', '2019-06-20', 'tunai', 'langsung', 'paimen', 'jakarta', '0123789456', ''),
+('t0004', 'b0001', '2019-06-20', 'tunai', 'transfer', 'paklek', 'bali', '0123789456', 0x4368727973616e7468656d756d2e6a7067);
 
 -- --------------------------------------------------------
 
@@ -187,6 +211,12 @@ ALTER TABLE `barang`
 ALTER TABLE `kredit`
   ADD PRIMARY KEY (`id_kredit`),
   ADD KEY `fk_kredit_barang` (`id_barang`);
+
+--
+-- Indexes for table `trans_tunai`
+--
+ALTER TABLE `trans_tunai`
+  ADD PRIMARY KEY (`id_transaksi`);
 
 --
 -- Indexes for table `user`

@@ -7,12 +7,12 @@
         <label for="exampleFormControlSelect1">ID Kredit</label>
         <select class="form-control" name="formId_kredit" id="exampleFormControlSelect1" required>
             <option></option>
-            <option value="k0001">k0001</option>
-            <option value="k0002">k0002</option>
-            <option value="k0003">k0003</option>
-            <option value="k0028">k0028</option>
-            <option value="k0029">k0029</option>
-            <option value="k0030">k0030</option>
+            <option value="k0007">k0007</option>
+            <option value="k0008">k0008</option>
+            <option value="k0009">k0009</option>
+            <option value="k0034">k0034</option>
+            <option value="k0035">k0035</option>
+            <option value="k0036">k0036</option>
     </select>
     </div>
     <div class="form-group col-md-6">

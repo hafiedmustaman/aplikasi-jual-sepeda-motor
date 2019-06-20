@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <?php endforeach; ?>
             </table>
 
-            <?php include 'application/views/order/honda/sport/form_kredit.php'; ?>
+            <?php include 'application/views/order/honda/bebek/form_kredit.php'; ?>
             </div>
             <div class="col-sm">
             </div>

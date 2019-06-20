@@ -238,6 +238,40 @@ class Rumah extends CI_Controller {
 					$this->load->view('order/langsung_done');
 				}
 
+			public function transfer_aksi_tambah()
+			{
+				$this->load->model('tunai_model');
+
+				$id_transaksi 		= $this->input->post('formId_transaksi');
+				$id_barang 			= $this->input->post('formId_barang');
+				$tgl_transaksi	 	= $this->input->post('formTgl_transaksi');
+				$tipe_pembayaran 	= $this->input->post('formTipe_pembayaran');
+				$pilihan_pembayaran = $this->input->post('formPilihan_pembayaran');
+				$nama_pembeli 		= $this->input->post('formNama_pembeli');
+				$alamat_pembeli 	= $this->input->post('formAlamat_pembeli');
+				$no_telp 			= $this->input->post('formNo_telp');
+				$bukti_pembayaran	= $this->input->post('formBukti_pembayaran');
+
+				$data = array(
+					'id_transaksi' => $id_transaksi,
+					'id_barang' => $id_barang,
+					'tgl_transaksi' => $tgl_transaksi,
+					'tipe_pembayaran' => $tipe_pembayaran,
+					'pilihan_pembayaran' => $pilihan_pembayaran,
+					'nama_pembeli' => $nama_pembeli,
+					'alamat_pembeli' => $alamat_pembeli,
+					'no_telp' => $no_telp,
+					'bukti_pembayaran' => $bukti_pembayaran,
+					);
+				$this->tunai_model->langsung_input_data($data,'trans_tunai');
+				redirect('rumah/transfer_done');
+			}
+
+				public function transfer_done()
+				{
+					$this->load->view('order/transfer_done');
+				}
+
 		public function honda_sport_kredit()
 		{
 			$this->load->model('kredit_model');
@@ -247,43 +281,87 @@ class Rumah extends CI_Controller {
 	
 		public function honda_matic_kredit()
 		{
-			$this->load->view('order/honda/matic/kredit');
+			$this->load->model('kredit_model');
+			$data = $this->kredit_model->honda_matic_skema();
+			$this->load->view('order/honda/matic/kredit', array('data' => $data));
 		}
 
 		public function honda_bebek_kredit()
 		{
-			$this->load->view('order/honda/bebek/kredit');
+			$this->load->model('kredit_model');
+			$data = $this->kredit_model->honda_bebek_skema();
+			$this->load->view('order/honda/bebek/kredit', array('data' => $data));
 		}
 
 		public function yamaha_sport_kredit()
 		{
-			$this->load->view('order/yamaha/sport/kredit');
+			$this->load->model('kredit_model');
+			$data = $this->kredit_model->yamaha_sport_skema();
+			$this->load->view('order/yamaha/sport/kredit', array('data' => $data));
 		}
 
 		public function yamaha_matic_kredit()
 		{
-			$this->load->view('order/yamaha/matic/kredit');
+			$this->load->model('kredit_model');
+			$data = $this->kredit_model->yamaha_matic_skema();
+			$this->load->view('order/yamaha/matic/kredit', array('data' => $data));
 		}
 
 		public function yamaha_bebek_kredit()
 		{
-			$this->load->view('order/yamaha/bebek/kredit');
+			$this->load->model('kredit_model');
+			$data = $this->kredit_model->yamaha_bebek_skema();
+			$this->load->view('order/yamaha/bebek/kredit', array('data' => $data));
 		}
 
 		public function suzuki_sport_kredit()
 		{
-			$this->load->view('order/suzuki/sport/kredit');
+			$this->load->model('kredit_model');
+			$data = $this->kredit_model->suzuki_sport_skema();
+			$this->load->view('order/suzuki/sport/kredit', array('data' => $data));
 		}
 
 		public function suzuki_matic_kredit()
 		{
-			$this->load->view('order/suzuki/matic/kredit');
+			$this->load->model('kredit_model');
+			$data = $this->kredit_model->suzuki_matic_skema();
+			$this->load->view('order/suzuki/matic/kredit', array('data' => $data));
 		}
 
 		public function suzuki_bebek_kredit()
 		{
+			$this->load->model('kredit_model');
+			$data = $this->kredit_model->suzuki_bebek_skema();
 			$this->load->view('order/suzuki/bebek/kredit');
 		}
+
+			public function kredit_aksi_tambah()
+				{
+					$this->load->model('kredit_model');
+
+					$id_transaksi 		= $this->input->post('formId_transaksi');
+					$id_kredit 			= $this->input->post('formId_kredit');
+					$tgl_transaksi	 	= $this->input->post('formTgl_transaksi');
+					$nama_pembeli 		= $this->input->post('formNama_pembeli');
+					$alamat_pembeli 	= $this->input->post('formAlamat_pembeli');
+					$no_telp 			= $this->input->post('formNo_telp');
+
+					$data = array(
+						'id_transaksi' => $id_transaksi,
+						'id_kredit' => $id_kredit,
+						'tgl_transaksi' => $tgl_transaksi,
+						'nama_pembeli' => $nama_pembeli,
+						'alamat_pembeli' => $alamat_pembeli,
+						'no_telp' => $no_telp,
+						);
+					$this->kredit_model->kredit_input_data($data,'trans_kredit');
+					redirect('rumah/kredit_done');
+				}
+
+				public function kredit_done()
+				{
+					$this->load->view('order/kredit_done');
+				}
 
 	public function tentang()
 	{
