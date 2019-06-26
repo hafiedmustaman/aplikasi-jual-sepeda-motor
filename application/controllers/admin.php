@@ -26,5 +26,10 @@ class Admin extends CI_Controller {
 	{
 		$this->load->view('admin/dasbor');
 	}
+
+	public function tentang()
+	{
+		$this->load->view('tentang');
+	}
 	
 }

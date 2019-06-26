@@ -10,7 +10,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <?php include 'application/views/komponen/js_head.php'; ?>
 </head>
 <body>
-<?php include 'application/views/admin/komponen/navbar.php'; ?>
+<?php
+	if ($this->session->userdata('level') == 'administrator') {
+		include 'application/views/admin/komponen/navbar.php'; //navbar
+	}
+	elseif ($this->session->userdata('level') !== 'administrator') {
+		include 'application/views/komponen/navbar.php'; //navbar
+	}
+?>
 <main class="container"> 
 
 <div class="row">

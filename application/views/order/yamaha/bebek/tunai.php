@@ -48,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                     <div class="card-body">
-                    <?php include 'application/views/order/yamaha/bebek/form_langsung.php'; ?>
+                    <?php include 'application/views/order/yamaha/bebek/form_transfer.php'; ?>
                     </div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                     <div class="card-body">
-                        Sedang proses...
+                    <?php include 'application/views/order/yamaha/tunai/form_transfer.php'; ?>
                     </div>
                     </div>
                 </div>

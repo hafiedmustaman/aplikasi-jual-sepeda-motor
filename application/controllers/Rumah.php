@@ -365,7 +365,12 @@ class Rumah extends CI_Controller {
 
 	public function tentang()
 	{
-		$this->load->view('tentang');
+		if ($this->session->userdata('level') == 'administrator') {
+			redirect(base_url("admin/tentang"));
+		}
+		elseif ($this->session->userdata('level') !== 'administrator') {
+			$this->load->view('tentang');
+		}
 	}
 
 }

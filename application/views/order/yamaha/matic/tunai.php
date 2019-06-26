@@ -62,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                     <div class="card-body">
-                        Sedang proses...
+                    <?php include 'application/views/order/yamaha/matic/form_transfer.php'; ?>
                     </div>
                     </div>
                 </div>
