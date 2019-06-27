@@ -12,12 +12,12 @@
         <i class="fas fa-table"></i> Tabel
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="<?php echo base_url() ?>rumah/honda">barang</a>
-          <a class="dropdown-item" href="<?php echo base_url() ?>rumah/yamaha">kredit</a>
-          <a class="dropdown-item" href="<?php echo base_url() ?>rumah/suzuki">trans_kredit</a>
-          <a class="dropdown-item" href="<?php echo base_url() ?>rumah/suzuki">trans_tunai</a>
+          <a class="dropdown-item" href="<?php echo base_url() ?>admin/table_barang">barang</a>
+          <a class="dropdown-item" href="<?php echo base_url() ?>admin/table_kredit">kredit</a>
+          <a class="dropdown-item" href="<?php echo base_url() ?>admin/table_trans_kredit">trans_kredit</a>
+          <a class="dropdown-item" href="<?php echo base_url() ?>admin/table_trans_tunai">trans_tunai</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="<?php echo base_url() ?>rumah/suzuki">user</a>
+          <a class="dropdown-item" href="<?php echo base_url() ?>admin/table_user">user</a>
         </div>
       </li>
       <li class="nav-item">

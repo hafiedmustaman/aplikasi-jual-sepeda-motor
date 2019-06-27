@@ -39,7 +39,7 @@
     </div>
     <div class="form-group col-md-6">
         <label for="exampleFormControlInput1">Bukti Pembayaran:</label>
-        <input type="file" enctype="multipart/form-data" class="form-control" id="exampleFormControlInput1" name="formBukti_pembayaran" placeholder="No. Telp" required>
+        <input type="file" enctype="multipart/form-data" class="form-control-file" id="exampleFormControlFile1" name="formBukti_pembayaran" required>
     </div>
     <div class="form-group col-md-6">
         <button type="submit" class="btn btn-primary" id="cari">Beli</button>
